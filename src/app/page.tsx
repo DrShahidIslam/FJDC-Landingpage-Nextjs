@@ -34,8 +34,27 @@ export default function Home() {
     return () => clearInterval(textInterval);
   }, []);
 
+  
   const images = [e, k, l, g, i, f, c]; // State to hold the images
   const [currentIndex, setCurrentIndex] = useState(0); // State to hold the current index
+  const [displayCount, setDisplayCount] = useState(1);
+
+  useEffect(() => {
+    function updateDisplayCount() {
+      if (window.innerWidth < 600) {
+        setDisplayCount(1);
+      } else if (window.innerWidth < 900) {
+        setDisplayCount(2);
+      } else {
+        setDisplayCount(4);
+      }
+    }
+
+    window.addEventListener('resize', updateDisplayCount);
+    updateDisplayCount();
+
+    return () => window.removeEventListener('resize', updateDisplayCount);
+  }, []);
 
   // Function to handle left arrow click
   const handleLeftClick = () => {
@@ -104,47 +123,44 @@ export default function Home() {
           </a>
         </div>
         <div className="relative w-full cursor-pointer flex justify-center items-center mt-8 md:mt-32 max-w-full overflow-hidden">
-  {currentIndex > 0 && (
-    <button
-      className="absolute left-4 md:left-6"
-      onClick={handleLeftClick}
-    >
-      <ArrowLeft color="#ffffff" />
-    </button>
-  )}
+      {currentIndex > 0 && (
+        <button
+          className="absolute left-2 md:left-6"
+          onClick={handleLeftClick}
+        >
+          <ArrowLeft color="#ffffff" />
+        </button>
+      )}
 
-  <div
-    className="flex max-w-full justify-center cursor-pointer gap-3 flex-wrap overflow-x-scroll md:overflow-visible"
-    style={{ scrollBehavior: "smooth" }}
-  >
-    {images.map((image, index) => (
       <div
-        key={index}
-        className={`w-[150px] md:w-[300px] h-[150px] relative mx-2 ${
-          index >= currentIndex && index < currentIndex + 4
-            ? ""
-            : "hidden md:block"
-        }`}
+        className="flex max-w-full justify-center cursor-pointer gap-3 flex-wrap overflow-x-scroll md:overflow-visible"
+        style={{ scrollBehavior: "smooth" }}
       >
-        <Image
-          src={image}
-          alt="fjdc"
-          layout="fill"
-          className="transition-transform duration-500 hover:scale-110"
-        />
+        {images.slice(currentIndex, currentIndex + displayCount).map((image, index) => (
+          <div
+            key={index}
+            className="w-[150px] md:w-[300px] h-[150px] relative mx-2"
+          >
+            <Image
+              src={image}
+              alt="fjdc"
+              layout="fill"
+              className="transition-transform duration-500 hover:scale-110"
+            />
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
 
-  {currentIndex < images.length - 1 && (
-    <button
-      className="absolute right-4 md:right-6"
-      onClick={handleRightClick}
-    >
-      <ArrowRight color="#ffffff" />
-    </button>
-  )}
-</div>
+      {currentIndex < images.length - displayCount && (
+        <button
+          className="absolute right-2 md:right-6"
+          onClick={handleRightClick}
+        >
+          <ArrowRight color="#ffffff" />
+        </button>
+      )}
+    </div>
+  
       </main>
 
       <footer className="w-full h-12 md:h-24 border-t text-white border-gray-200 flex justify-center items-center">
