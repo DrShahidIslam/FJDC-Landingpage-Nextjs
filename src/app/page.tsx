@@ -56,15 +56,6 @@ export default function Home() {
         backgroundPosition: "center",
       }}
     >
-      <Head>
-        <title>AI in Medicine Course</title>
-        <meta
-          name="description"
-          content="AI in Medicine and dentistry course"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
         <h1
           className="text-5xl mb-3 p-2 font-bold"

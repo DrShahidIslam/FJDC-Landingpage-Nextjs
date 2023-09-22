@@ -18,7 +18,7 @@ export default function Contact() {
         <p className="text-lg m-2"><strong>Phone:</strong> +92-35111963-4-5</p>
         <p className="text-lg m-2"><strong>Email:</strong> info@fjdc.ai</p>
       </div>
-      <button className='p-2 text-lg rounded-lg font-bold mt-20'
+      <button className='p-2 text-lg hover:scale-105 rounded-lg font-bold mt-20'
       style={{
         backgroundColor: "rgba(255, 255, 255, 0.8)",
         color: "black",
