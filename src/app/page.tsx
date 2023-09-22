@@ -49,16 +49,16 @@ export default function Home() {
 
   return (
     <div
-      className="flex flex-col items-center justify-center min-h-screen py-2"
+      className="flex flex-col items-center justify-center min-h-screen py-2 md:px-20 px-4"
       style={{
         backgroundImage: `url(${fjdc.src})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
+      <main className="flex flex-col items-center justify-center w-full flex-1 text-center">
         <h1
-          className="text-5xl mb-3 p-2 font-bold"
+          className="text-2xl md:text-5xl mb-3 p-2 font-bold"
           style={{
             backgroundColor: "rgba(255, 255, 255, 0.8)",
             color: "black",
@@ -67,14 +67,17 @@ export default function Home() {
           Igniting a new era of Leadership and Innovation
         </h1>
 
-        <p className="mt-12 text-2xl typing-effect" style={{ color: "white" }}>
+        <p
+          className="mt-12 text-xs sm:text-xs md:text-lg lg:text-2xl typing-effect"
+          style={{ color: "white", wordWrap: "break-word" }}
+        >
           {text}
         </p>
 
-        <div className="flex mt-6">
+        <div className="flex flex-col md:flex-row mt-6">
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSdYpU2nMSYKE2-gKKeahQ3ZEaakJgG_nfX3oHsbB9DlonrMMg/viewform"
-            className="mx-4 bg-yellow-500 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded"
+            className="mx-4 my-2 md:my-0 bg-yellow-500 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded"
             style={{
               color: "black",
             }}
@@ -83,7 +86,7 @@ export default function Home() {
           </a>
           <a
             href="https://docs.google.com/document/d/1HwSCgdMPQxNmVN3Y5PxQqLUeNYxxemH-EI8oGpxyyYc/"
-            className="mx-4 bg-yellow-500 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded"
+            className="mx-4 my-2 md:my-0 bg-yellow-500 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded"
             style={{
               color: "black",
             }}
@@ -92,7 +95,7 @@ export default function Home() {
           </a>
           <a
             href="/Contact"
-            className="mx-4 bg-yellow-500 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded"
+            className="mx-4 my-2 md:my-0 bg-yellow-500 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded"
             style={{
               color: "black",
             }}
@@ -100,52 +103,51 @@ export default function Home() {
             Contact Us
           </a>
         </div>
+        <div className="relative w-full cursor-pointer flex justify-center items-center mt-8 md:mt-32 max-w-full overflow-hidden">
+  {currentIndex > 0 && (
+    <button
+      className="absolute left-4 md:left-6"
+      onClick={handleLeftClick}
+    >
+      <ArrowLeft color="#ffffff" />
+    </button>
+  )}
 
-        <div className="relative w-full cursor-pointer flex justify-center items-center mt-32 max-w-full overflow-hidden">
-          {currentIndex > 0 && (
-            <button
-              style={{ position: "absolute", left: 15 }}
-              onClick={handleLeftClick}
-            >
-              <ArrowLeft color="#ffffff" />
-            </button>
-          )}
+  <div
+    className="flex max-w-full justify-center cursor-pointer gap-3 flex-wrap overflow-x-scroll md:overflow-visible"
+    style={{ scrollBehavior: "smooth" }}
+  >
+    {images.map((image, index) => (
+      <div
+        key={index}
+        className={`w-[150px] md:w-[300px] h-[150px] relative mx-2 ${
+          index >= currentIndex && index < currentIndex + 4
+            ? ""
+            : "hidden md:block"
+        }`}
+      >
+        <Image
+          src={image}
+          alt="fjdc"
+          layout="fill"
+          className="transition-transform duration-500 hover:scale-110"
+        />
+      </div>
+    ))}
+  </div>
 
-          <div
-            className="flex max-w-full cursor-pointer gap-3"
-            style={{ scrollBehavior: "smooth" }}
-          >
-            {images.map((image, index) => (
-              <div
-                key={index}
-                className={`w-[300px] h-[200px] relative mx-2 ${
-                  index >= currentIndex && index < currentIndex + 4
-                    ? ""
-                    : "hidden"
-                }`}
-              >
-                <Image
-                  src={image}
-                  alt="fjdc"
-                  layout="fill"
-                  className="transition-transform duration-500 hover:scale-110"
-                />
-              </div>
-            ))}
-          </div>
-
-          {currentIndex < images.length - 1 && (
-            <button
-              style={{ position: "absolute", right: 15 }}
-              onClick={handleRightClick}
-            >
-              <ArrowRight color="#ffffff" />
-            </button>
-          )}
-        </div>
+  {currentIndex < images.length - 1 && (
+    <button
+      className="absolute right-4 md:right-6"
+      onClick={handleRightClick}
+    >
+      <ArrowRight color="#ffffff" />
+    </button>
+  )}
+</div>
       </main>
 
-      <footer className="w-full h-24 border-t text-white border-gray-200 flex justify-center items-center">
+      <footer className="w-full h-12 md:h-24 border-t text-white border-gray-200 flex justify-center items-center">
         © 2023 FJDC.AI
       </footer>
     </div>
