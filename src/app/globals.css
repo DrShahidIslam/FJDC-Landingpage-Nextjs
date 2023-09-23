@@ -2,39 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.typing-effect {
+  border-right: .15em solid orange; /* The typewriter cursor */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  overflow-wrap: break-word; /* Allows the text to break onto next line */
+  animation:
+    typing 3.5s steps(40, end), /* Speed/duration of the typing each step */
+    blink-caret .75s step-end infinite; /* Speed/duration of the cursor blinking */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@media (max-width: 600px) {
+  .typing-effect {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    animation:
+      marquee 20s linear infinite;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-@keyframes typing {
-  from { width: 0 }
+@media (min-width: 601px) and (max-width: 1024px) {
+  .typing-effect {
+    font-size: 18px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    animation:
+      marquee 20s linear infinite;
+  }
 }
 
-.typing-effect {
-  overflow: hidden;
-  border-right: .15em solid orange; /* The typewriter cursor */
-  /* white-space: nowrap; Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: typing 3.5s steps(40, end), /* Speed/duration of the typing each step */
-             blink-caret .75s step-end infinite; /* Speed/duration of the cursor blinking */
+@media (min-width: 1025px) {
+  .typing-effect {
+    font-size: 24px;
+    white-space: nowrap;
+    animation:
+      typing 3.5s steps(40, end), /* Speed/duration of the typing each step */
+      blink-caret .75s step-end infinite; /* Speed/duration of the cursor blinking */
+  }
+}
+
+@keyframes marquee {
+  from { text-indent: 100% }
+  to { text-indent: -100% }
 }

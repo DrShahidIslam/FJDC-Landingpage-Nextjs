@@ -1,20 +1,10 @@
 "use client";
 // Import the necessary libraries
-import Head from "next/head";
-import Image from "next/image";
 import { useEffect, useState } from "react";
-import fjdc from "../../public/fjdc.jpg";
-import c from "../../public/IMG-20230902-WA0010.jpg";
-import e from "../../public/IMG-20230902-WA0012.jpg";
-import f from "../../public/IMG-20230920-WA0013.jpg";
-import g from "../../public/IMG-20230920-WA0014.jpg";
-import i from "../../public/IMG-20230920-WA0016.jpg";
-import k from "../../public/IMG-20230920-WA0018.jpg";
-import l from "../../public/IMG-20230920-WA0019.jpg";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import fjdc from "../../public/fjdcbanner.jpg";
 
 export default function Home() {
-  const textContent = "Register now for our upcoming 3 months program.";
+  const textContent = "Register now for our upcoming 3 months program. Limited seats available on First come First serve basis";
   const [text, setText] = useState("");
 
   useEffect(() => {
@@ -35,135 +25,58 @@ export default function Home() {
   }, []);
 
   
-  const images = [e, k, l, g, i, f, c]; // State to hold the images
-  const [currentIndex, setCurrentIndex] = useState(0); // State to hold the current index
-  const [displayCount, setDisplayCount] = useState(1);
-
-  useEffect(() => {
-    function updateDisplayCount() {
-      if (window.innerWidth < 600) {
-        setDisplayCount(1);
-      } else if (window.innerWidth < 900) {
-        setDisplayCount(2);
-      } else {
-        setDisplayCount(4);
-      }
-    }
-
-    window.addEventListener('resize', updateDisplayCount);
-    updateDisplayCount();
-
-    return () => window.removeEventListener('resize', updateDisplayCount);
-  }, []);
-
-  // Function to handle left arrow click
-  const handleLeftClick = () => {
-    setCurrentIndex((currentIndex - 1 + images.length) % images.length);
-  };
-
-  // Function to handle right arrow click
-  const handleRightClick = () => {
-    setCurrentIndex((currentIndex + 1) % images.length);
-  };
-
   return (
     <div
-      className="flex flex-col items-center justify-center min-h-screen py-2 md:px-20 px-4"
-      style={{
-        backgroundImage: `url(${fjdc.src})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <main className="flex flex-col items-center justify-center w-full flex-1 text-center">
-        <h1
-          className="text-2xl md:text-5xl mb-3 p-2 font-bold"
-          style={{
-            backgroundColor: "rgba(255, 255, 255, 0.8)",
-            color: "black",
-          }}
-        >
-          Igniting a new era of Leadership and Innovation
-        </h1>
-
-        <p
-          className="mt-12 text-xs sm:text-xs md:text-lg lg:text-2xl typing-effect"
-          style={{ color: "white", wordWrap: "break-word" }}
-        >
-          {text}
-        </p>
-
-        <div className="flex flex-col md:flex-row mt-6">
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdYpU2nMSYKE2-gKKeahQ3ZEaakJgG_nfX3oHsbB9DlonrMMg/viewform"
-            className="mx-4 my-2 md:my-0 bg-yellow-500 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded"
-            style={{
-              color: "black",
-            }}
-          >
-            Register Now
-          </a>
-          <a
-            href="https://docs.google.com/document/d/1HwSCgdMPQxNmVN3Y5PxQqLUeNYxxemH-EI8oGpxyyYc/"
-            className="mx-4 my-2 md:my-0 bg-yellow-500 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded"
-            style={{
-              color: "black",
-            }}
-          >
-            Course Outline
-          </a>
-          <a
-            href="/Contact"
-            className="mx-4 my-2 md:my-0 bg-yellow-500 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded"
-            style={{
-              color: "black",
-            }}
-          >
-            Contact Us
-          </a>
+    className="flex flex-col items-center justify-center min-h-screen py-2 md:px-20 px-4"
+    style={{
+      backgroundImage: `url(${fjdc.src})`,
+      backgroundSize: "fill",
+      backgroundPosition: "right center",
+    }}
+  >
+    <main className="flex flex-col items-center justify-center w-full flex-1 text-center">
+      <div className="flex flex-col md:flex-row md:justify-end w-full">
+        <div className="md:w-1/2 p-4">
+          {/* Empty div for left half of the page */}
         </div>
-        <div className="relative w-full cursor-pointer flex justify-center items-center mt-8 md:mt-32 max-w-full overflow-hidden">
-      {currentIndex > 0 && (
-        <button
-          className="absolute left-2 md:left-6"
-          onClick={handleLeftClick}
-        >
-          <ArrowLeft color="#ffffff" />
-        </button>
-      )}
-
-      <div
-        className="flex max-w-full justify-center cursor-pointer gap-3 flex-wrap overflow-x-scroll md:overflow-visible"
-        style={{ scrollBehavior: "smooth" }}
-      >
-        {images.slice(currentIndex, currentIndex + displayCount).map((image, index) => (
-          <div
-            key={index}
-            className="w-[150px] md:w-[300px] h-[150px] relative mx-2"
-          >
-            <Image
-              src={image}
-              alt="fjdc"
-              layout="fill"
-              className="transition-transform duration-500 hover:scale-110"
-            />
+        <div className="mx-52 flex flex-col gap-6 p-4">
+          <div style={{ minHeight: '2em', width: '100%', textAlign: 'center', overflow: 'hidden' }}>
+            <p
+              className="mt-12 text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl typing-effect"
+              style={{ color: "white", wordWrap: "break-word", position: 'fixed', top: '0', left: '50%', transform: 'translateX(-50%)' }}
+            >
+              {text}
+            </p>
+            </div>
+            <a
+              href="https://forms.gle/V2DRjj2ChmLVVkqJ8"
+              className="bg-yellow-500 hover:bg-orange-400 hover:scale-105 font-bold text-xl py-1 px-8 rounded text-black"
+            >
+              Pre-Register Now
+            </a>
+            <a
+              href="https://docs.google.com/document/d/1HwSCgdMPQxNmVN3Y5PxQqLUeNYxxemH-EI8oGpxyyYc/"
+              className="bg-yellow-500 hover:bg-orange-400 hover:scale-105 font-bold text-xl py-1 px-2 rounded"
+            >
+              Course Outline
+            </a>
+            <a
+              href="/Contact"
+              className="bg-yellow-500 hover:bg-orange-400 hover:scale-105 font-bold text-xl py-1 px-2 rounded"
+            >
+              Contact Us
+            </a>
+            <a
+              href="/Gallery"
+              className="bg-yellow-500 hover:bg-orange-400 hover:scale-105 font-bold text-xl py-1 px-2 rounded"
+            >
+              Gallery
+            </a>
           </div>
-        ))}
-      </div>
-
-      {currentIndex < images.length - displayCount && (
-        <button
-          className="absolute right-2 md:right-6"
-          onClick={handleRightClick}
-        >
-          <ArrowRight color="#ffffff" />
-        </button>
-      )}
-    </div>
-  
+        </div>
       </main>
 
-      <footer className="w-full h-12 md:h-24 border-t text-white border-gray-200 flex justify-center items-center">
+      <footer className="w-full h-12 md:h-24 text-white flex justify-center items-center">
         © 2023 FJDC.AI
       </footer>
     </div>
