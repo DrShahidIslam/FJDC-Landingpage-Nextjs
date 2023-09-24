@@ -1,9 +1,36 @@
 "use client";
 // Import the necessary libraries
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import fjdc from "../../public/fjdcbanner.jpg";
+import fjdcstandee from '../../public/fjdcstandee.jpg'
+
+function useWindowSize() {
+  const [windowSize, setWindowSize] = useState<{ width?: number, height?: number }>({
+    width: undefined,
+    height: undefined,
+  });
+
+  useLayoutEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+    
+    window.addEventListener('resize', handleResize);
+    
+    handleResize();
+    
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return windowSize;
+}
+
 
 export default function Home() {
+  const size = useWindowSize();
   const textContent =
     "Register now for our upcoming 3 months program. Limited seats available on First come First serve basis";
   const [text, setText] = useState("");
@@ -24,16 +51,16 @@ export default function Home() {
 
     return () => clearInterval(textInterval);
   }, []);
-
+  
   return (
     <div
-      className="flex flex-col items-center justify-center min-h-screen py-2 md:px-20 px-4"
-      style={{
-        backgroundImage: `url(${fjdc.src})`,
-        backgroundSize: "fill",
-        backgroundPosition: "right center",
-      }}
-    >
+  className="flex flex-col items-center justify-center min-h-screen py-2 md:px-20 px-4"
+  style={{
+    backgroundImage: `url(${(size.width || 0) > 768 ? fjdc.src : fjdcstandee.src})`,
+    backgroundSize: "contain",
+    backgroundPosition: "center",
+  }}
+>
       <main className="flex flex-col items-center justify-center w-full flex-1 text-center">
         <div className="flex flex-col md:flex-row md:justify-end w-full">
           <div className="md:w-1/2 p-4">
@@ -65,7 +92,7 @@ export default function Home() {
             <div className="mx-10 flex flex-col gap-8 items-center justify-center sm:mx-10 md:mx-40">
               <a
                 href="https://forms.gle/V2DRjj2ChmLVVkqJ8"
-                className="w-full bg-yellow-500 hover:bg-orange-400 hover:scale-105 font-bold text-xl py-1 px-2 sm:px-4 md:px-8 rounded text-center whitespace-nowrap"
+                className=" w-full mt-28 bg-yellow-500 hover:bg-orange-400 hover:scale-105 font-bold text-xl py-1 px-2 sm:px-4 md:px-8 rounded text-center whitespace-nowrap"
               >
                 Pre-Register Now
               </a>
