@@ -16,9 +16,8 @@
   .typing-effect {
     font-size: 14px;
     white-space: nowrap;
-    overflow-x: hidden;
-    animation:
-      marquee 20s linear infinite;
+    animation: marquee 20s linear infinite;
+    width: auto /* Ensure the text remains visible within its container */
   }
 }
 
@@ -43,6 +42,6 @@
 }
 
 @keyframes marquee {
-  from { text-indent: 100% }
-  to { text-indent: -100% }
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }

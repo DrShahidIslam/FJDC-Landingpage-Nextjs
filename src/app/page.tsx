@@ -62,7 +62,7 @@ export default function Home() {
                 {text}
               </p>
             </div>
-            <div className="flex flex-col gap-6 items-center justify-center sm:mx-10 md:mx-40">
+            <div className="mx-10 flex flex-col gap-8 items-center justify-center sm:mx-10 md:mx-40">
               <a
                 href="https://forms.gle/V2DRjj2ChmLVVkqJ8"
                 className="w-full bg-yellow-500 hover:bg-orange-400 hover:scale-105 font-bold text-xl py-1 px-2 sm:px-4 md:px-8 rounded text-center whitespace-nowrap"
