@@ -3,6 +3,8 @@
 import { useEffect, useLayoutEffect, useState } from "react";
 import fjdc from "../../public/fjdcbanner.jpg";
 import fjdcstandee from '../../public/fjdcstandee.jpg'
+import landing from '../../public/landing.jpg'
+import fjdc1 from '../../public/fjdc-transformed.jpeg'
 
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState<{ width?: number, height?: number }>({
@@ -54,11 +56,13 @@ export default function Home() {
   
   return (
     <div
-  className="flex flex-col items-center justify-center min-h-screen py-2 md:px-20 px-4"
+  className="flex flex-col items-center justify-center min-h-screen py-2 md:px-40 px-4"
   style={{
     backgroundImage: `url(${(size.width || 0) > 768 ? fjdc.src : fjdcstandee.src})`,
-    backgroundSize: "contain",
+    backgroundSize: (size.width || 0) > 768 ? "cover" : "contain",
     backgroundPosition: "center",
+    width: '110vw', 
+  height: '100vh'
   }}
 >
       <main className="flex flex-col items-center justify-center w-full flex-1 text-center">
