@@ -88,7 +88,7 @@ export default function Home() {
                   at FJDC
                 </p>
                 <p className="border-2 p-2 text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-2xl text-white">
-                  "Center for Leadership and Innovation"
+                  Center for Leadership and Innovation
                 </p>
                 <a
                   href="https://forms.gle/iRpMT7QXyQ3AHCaaA"
