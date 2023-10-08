@@ -43,14 +43,14 @@ const Outline = () => {
         <div className="flex object-center max-w-screen-lg shadow-lg mx-2 md:mx-40 ">
           <Image src={appication} alt="ai in healthcare"></Image>
         </div>
-        <h2 className="text-center m-10 text-xl lg:text-3xl font-bold">
+        <h2 className="text-center my-16 text-2xl lg:text-3xl font-bold">
             The Program Designers
           </h2>
 
 
         <div className="flex flex-col md:flex-row justify-center m-6 space-y-6 md:space-x-6 md:space-y-0">
           
-          <div className="flex flex-col justify-center text-center xl:flex-row shadow-lg">
+          <div className="flex flex-col p-2 justify-center rounded-xl text-center xl:flex-row shadow-lg">
             <Image
               className="mx-2 w-full md:w-auto"
               src={zia}
@@ -67,7 +67,7 @@ const Outline = () => {
             Blockchain technologies, Data Science, Digital Finance and Cloud
             Native Computing. Currently, he is the CEO of Panacloud (Pvt.) Ltd.
           </div>
-          <div className="flex flex-col text-center xl:flex-row rounded-lg p-2 justify-center shadow-lg">
+          <div className="flex flex-col text-center xl:flex-row rounded-xl p-3 justify-center shadow-lg">
             <Image
               className="mx-2 w-full h-full md:w-auto"
               src={qasim}
@@ -87,7 +87,7 @@ const Outline = () => {
             Science.
           </div>
         </div>
-        <h2 className="text-center m-10 text-xl lg:text-3xl font-bold">
+        <h2 className="text-center my-16 text-3xl lg:text-4xl font-bold">
             Course Outline
           </h2>
         <div className="mt-10 md:flex md:flex-row gap-x-10 gap-y-8 mb-10">

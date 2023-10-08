@@ -56,7 +56,7 @@ export default function Gallery() {
       <div className="flex justify-center md:text-5xl lg:text-6xl font-semibold text-4xl text-white">
         Gallery
       </div>
-      <div className="relative w-full cursor-pointer flex justify-center items-center mt-8 md:mt-20 max-w-full overflow-hidden">
+      <div className="relative w-full cursor-pointer flex justify-center items-center mt-24 max-w-full overflow-hidden">
         {currentIndex > 0 && (
           <button
             className="absolute left-4 md:left-6"

@@ -16,14 +16,14 @@ const Sidebar = () => {
           <span className="text-lg font-bold"></span>
           <button
             onClick={toggleMenu}
-            className="text-white p-2 focus:outline-none"
+            className="text-white p-6 focus:outline-none"
             
           ><Menu />
             
           </button>
         </div>
         {menuVisible && (
-          <div className="mt-2 bg-yellow-400 flex rounded-b-2xl flex-col justify-center items-center">
+          <div className=" bg-yellow-400 flex rounded-b-2xl flex-col justify-center items-center">
             {/* Mobile Menu */}
             <Link href="/Course-Outline">
               <div className="my-1 font-bold text-white text-lg py-2 duration-200 hover:scale-105 border-b-2 w-full">
