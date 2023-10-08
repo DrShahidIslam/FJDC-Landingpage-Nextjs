@@ -18,11 +18,7 @@ export default function Contact() {
         <p className="text-sm md:text-base lg:text-lg m-1 md:m-2 lg:m-3"><strong>Phone:</strong> +92-35111963-4-5</p>
         <p className="text-sm md:text-base lg:text-lg m-1 md:m-2 lg:m-3"><strong>Email:</strong> info@fjdc.ai</p>
       </div>
-      <button className='p-2 text-sm md:text-base lg:text-lg hover:scale-105 rounded-lg font-bold mt-10 md:mt-15 lg:mt-20'
-      style={{
-        backgroundColor: "rgba(255, 255, 255, 0.8)",
-        color: "black",
-      }}>
+      <button className='p-2 text-sm md:text-lg lg:text-xl hover:scale-105 bg-yellow-500 rounded-lg font-bold mt-10 md:mt-15 lg:mt-20'>
         <Link href='/'>
           Home
         </Link>

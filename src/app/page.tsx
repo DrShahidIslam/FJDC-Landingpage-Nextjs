@@ -4,6 +4,8 @@ import { useEffect, useLayoutEffect, useState } from "react";
 import fjdc from "../../public/fjdcbanner.jpg";
 import fjdcstandee from "../../public/fjdcstandee.jpg";
 import landingblank from "../../public/sdaf.jpg";
+import Sidebar from "./Components/sidebar";
+import img from "../../public/scaled.jpg";
 
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState<{
@@ -56,83 +58,73 @@ export default function Home() {
   }, []);
 
   return (
-    <><div
-      className="flex flex-col items-center justify-center min-h-screen py-2 md:px-18 lg:px-12 px-4"
-      style={{
-        backgroundImage: `url(${(size.width || 0) > 600 ? landingblank.src : fjdcstandee.src})`,
-        backgroundSize: (size.width || 0) > 600 ? "cover" : "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <main className="flex flex-col items-center justify-center w-full flex-1 text-center">
-        <div className="flex flex-col md:flex-row md:justify-end w-full">
-          <div className="md:w-1/2 p-2 flex flex-col m-12 space-y-3 items-center justify-center">
-            <h1 className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-white font-bold mb-4">
-              Welcome to <span className="text-yellow-500">FJDC.AI</span>
-            </h1>
-            <p className="text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-white">
-              Igniting a new ERA of{" "}
-              <span className="text-yellow-500 font-bold">Leadership</span> and{" "}
-              <span className="text-yellow-500 font-bold">Innovation</span> at FJDC
-            </p>
-          </div>
-          <div className="flex flex-col gap-6">
-            <div
-              style={{
-                minHeight: "2em",
-                width: "100%",
-                textAlign: "center",
-                overflow: "hidden",
-              }}
-            >
-              <p
-                className="mt-12 text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl typing-effect"
-                style={{
-                  color: "white",
-                  wordWrap: "break-word",
-                  position: "fixed",
-                  top: "0",
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                }}
-              >
-                {text}
-              </p>
+    <>
+      <Sidebar />
+      <div
+        className="flex flex-col items-center justify-center h-screen md:px-18 lg:px-12 px-4 "
+        style={{
+          backgroundImage: `url(${
+            (size.width || 0) > 600 ? img.src : fjdcstandee.src
+          })`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+          <main className="flex flex-col items-center justify-center w-full text-center">
+            <div className="flex flex-col md:flex-row w-full">
+              <div className="md:w-1/2 p-2 flex flex-col space-y-4 items-center max-w-screen-md justify-center">
+                <h1 className="text-4xl flex flex-col md:text-3xl lg:text-4xl space-y-3 xl:text-5xl 2xl:text-5xl text-white font-bold mb-4">
+                  Welcome to<br></br>{" "}
+                  <span className="text-yellow-400 2xl:text-6xl">FJDC.AI</span>
+                </h1>
+                <p className="text-lg md:text-lg lg:text-xl xl:text-2xl 2xl:text-2xl text-white">
+                  Igniting a new ERA of{" "}
+                  <span className="text-yellow-400 font-bold">Leadership</span>{" "}
+                  and{" "}
+                  <span className="text-yellow-400 font-bold">
+                    <br></br>Innovation
+                  </span>{" "}
+                  at FJDC
+                </p>
+                <p className="border-2 p-2 text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-2xl text-white">
+                  "Center for Leadership and Innovation"
+                </p>
+                <a
+                  href="https://forms.gle/iRpMT7QXyQ3AHCaaA"
+                  className=" w-auto bg-yellow-400 items-center justify-center duration-300 transition transform ease-in-out hover:bg-orange-400 hover:scale-105 font-bold text-2xl p-2 sm:px-4 md:px-8 rounded text-center whitespace-nowrap"
+                >
+                  Register Now
+                </a>
+              </div>
+              <div className="flex flex-col gap-6">
+                <div
+                  style={{
+                    minHeight: "2em",
+                    width: "100%",
+                    textAlign: "center",
+                    overflow: "hidden",
+                  }}
+                >
+                  <p
+                    className="mt-12 text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl typing-effect"
+                    style={{
+                      color: "white",
+                      wordWrap: "break-word",
+                      position: "fixed",
+                      top: "0",
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                    }}
+                  >
+                    {text}
+                  </p>
+                </div>
+                <div></div>
+              </div>
             </div>
-            <div className="mx-10 flex flex-col gap-8 items-center justify-center sm:mx-10 md:mx-40">
-              <a
-                href="https://forms.gle/iRpMT7QXyQ3AHCaaA"
-                className=" w-full mt-10 bg-yellow-500 hover:bg-orange-400 hover:scale-105 font-bold text-xl py-1 px-2 sm:px-4 md:px-8 rounded text-center whitespace-nowrap"
-              >
-                Register Now
-              </a>
-              <a
-                href="/Course-Outline"
-                className="w-full bg-yellow-500 hover:bg-orange-400 hover:scale-105 font-bold text-xl py-1 px-2 sm:px-4 md:px-8 rounded text-center whitespace-nowrap"
-              >
-                Course Outline
-              </a>
-              <a
-                href="/Contact"
-                className="w-full bg-yellow-500 hover:bg-orange-400 hover:scale-105 font-bold text-xl py-1 px-2 sm:px-4 md:px-8 rounded text-center whitespace-nowrap"
-              >
-                Contact Us
-              </a>
-              <a
-                href="/Gallery"
-                className="w-full bg-yellow-500 hover:bg-orange-400 hover:scale-105 font-bold text-xl py-1 px-2 sm:px-4 md:px-8 rounded text-center text-overflow:ellipsis whitespace-nowrap"
-              >
-                Gallery
-              </a>
-            </div>
-          </div>
-        </div>
-      </main>
-
-
-    </div><footer className="w-full h-12 md:h-24 text-white flex justify-center items-center">
-        © 2023 FJDC.AI
-      </footer></>
-      
+          </main>
+      </div>
+    </>
   );
 }

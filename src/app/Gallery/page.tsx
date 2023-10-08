@@ -75,7 +75,7 @@ export default function Gallery() {
             .map((image, index) => (
               <div
                 key={index}
-                className="w-[150px] md:w-[300px] h-[150px] md:h-[250px] relative mx-2"
+                className="w-[200px] md:w-[300px] h-[200px] md:h-[250px] relative mx-2"
               >
                 <Image
                   src={image}
@@ -96,11 +96,7 @@ export default function Gallery() {
           </button>
         )}
       </div>
-      <button className='p-2 text-sm md:text-base lg:text-lg hover:scale-105 rounded-lg font-bold mt-10 md:mt-15 lg:mt-20'
-      style={{
-        backgroundColor: "rgba(255, 255, 255, 0.8)",
-        color: "black",
-      }}>
+      <button className='p-2 text-sm md:text-lg lg:text-xl hover:scale-105 bg-yellow-500 rounded-lg font-bold mt-10 md:mt-15 lg:mt-20'>
         <Link href='/'>
           Home
         </Link>
