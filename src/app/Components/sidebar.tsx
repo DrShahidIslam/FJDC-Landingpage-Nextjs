@@ -11,32 +11,32 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="fixed w-full text-white p-2 md:hidden">
+      <div className="fixed w-full text-white p-2 lg:hidden">
         <div className="flex justify-between items-center">
           <span className="text-lg font-bold"></span>
           <button
             onClick={toggleMenu}
-            className="text-white p-6 focus:outline-none"
+            className="text-white p-6 relative focus:outline-none"
             
           ><Menu />
             
           </button>
         </div>
         {menuVisible && (
-          <div className=" bg-yellow-400 flex rounded-b-2xl flex-col justify-center items-center">
+          <div className=" bg-yellow-400 p-4 flex absolute right-8 top-16 rounded-b-2xl flex-col justify-center items-center">
             {/* Mobile Menu */}
             <Link href="/Course-Outline">
-              <div className="my-1 font-bold text-black text-lg border-black py-2 duration-200 hover:scale-105 border-b-2 w-auto">
+              <div className="my-1 font-bold text-black text-lg border-black py-2 duration-200 hover:bg-black hover:scale-105 hover:text-white border-b-2 w-auto">
                 Course Details
               </div>
             </Link>
             <Link href="/Contact">
-              <div className="my-1 font-bold text-black border-b-2 border-black text-lg duration-200 hover:scale-105 py-2">
+              <div className="my-1 font-bold text-black border-b-2 border-black text-lg duration-200 hover:scale-105 hover:bg-black hover:text-white py-2">
                 Contact
               </div>
             </Link>
             <Link href="/Gallery">
-              <div className="my-1 font-bold text-black border-black border-b-2 text-lg duration-200 hover:scale-105 py-2">
+              <div className="my-1 font-bold text-black border-black border-b-2 text-lg duration-200 hover:scale-105 hover:bg-black hover:text-white py-2">
                 Gallery
               </div>
             </Link>

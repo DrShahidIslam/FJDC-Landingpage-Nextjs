@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
-export default function Sidebar() {
+export default function Navigation() {
     const [selectedLink, setSelectedLink] = useState('');
 
   useEffect(() => {
@@ -20,8 +20,11 @@ export default function Sidebar() {
 
   const links = [
     { href: '/Course-Outline#uses', text: 'Uses of AI in Healthcare' },
+    { href: '/Course-Outline#details', text:'Course Fees and Duration'},
     { href: '/Course-Outline#designers', text: 'Course Designers' },
     { href: '/Course-Outline#outline', text: 'Course Outline' },
+    // { href: '/Reference-Material', text: 'Reference Material' }
+    
   ];
 
   return (

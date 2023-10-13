@@ -7,7 +7,9 @@ import Link from "next/link";
 import qasim from "../../../public/qasim.jpg";
 import zia from "../../../public/zia.jpg";
 import { programsData } from "../Components/programsdata";
-import Sidebar from "../Components/Navigation";
+import Sidebar from "../Components/sidebar";
+import Navigation from "../Components/Navigation";
+import Navbar from "../Components/Sidebar-pages";
 
 const Outline = () => {
   const [selectedItem, setSelectedItem] = useState("web");
@@ -31,33 +33,45 @@ const Outline = () => {
             }}
           />
           
-          <div className="absolute inset-0 bg-white opacity-50 z-10" style={{position: 'fixed'}}></div>
-          <h1 className="mx-3 mt-5 p-2 md:mb-20 mb-10 text-xl md:text-4xl font-extrabold text-center xl:mx-44 rounded-xl md:p-2 lg:p-3 bg-gray-200" style={{position: 'relative', zIndex: 20}}>
+          <div className="absolute inset-0 bg-white opacity-80 z-10" style={{position: 'fixed'}}></div>
+          <div className="m-5 relative z-30"><Navbar /></div>
+          <h1 className="mx-3 m-5 p-2 md:mb-20 mb-10 text-xl md:text-4xl font-extrabold text-center xl:mx-44 rounded-xl md:p-2 lg:p-3 " style={{position: 'relative', zIndex: 20}}>
     {" "}
     Certified Generative AI Healthcare and Medical Specialist
 </h1>
       <div className="flex lg:flex-row flex-col items-center md:items-stretch my-4 z-10 relative ">
-        <div><Sidebar /></div>
+      <div><Navigation/></div>
+        
         <div>
             
-        <p className="text-center m-2 md:mx-20 rounded-xl mx-3 lg:my-2 md:my-4 my-12 p-3 text-md md:text-xl bg-slate-700 text-white">
+        <p className="text-center m-2 md:mx-20 rounded-xl mx-3 lg:my-2 md:my-4 my-24 p-3 text-md md:text-xl bg-slate-700 text-white">
           Generative AI in healthcare refers to the application of generative
           artificial intelligence techniques and models in various aspects of
           the healthcare industry. It involves using machine learning algorithms
           to generate new and original content that is relevant to healthcare,
           such as medical images, personalized treatment plans, and more.
         </p>
-        <div id="uses" className="flex object-center max-w-screen-lg shadow-lg mx-2 md:my-32 xl:mx-36 2xl:mx-80 md:mx-24 ">
+        <div id="uses" className="flex object-center max-w-screen-lg shadow-lg mx-2 md:my-32 xl:mx-36 2xl:mx-68 md:mx-24 ">
           <Image src={appication} alt="ai in healthcare"></Image>
         </div>
-        <h2 id="designers" className="text-center my-16 p-2 lg:my-32 text-2xl lg:text-4xl 2xl:text-5xl md:mx-52 mx-12 lg:mx-40 2xl:mx-96 rounded-xl md:p-2 lg:p-3 bg-gray-200 font-bold">
+        <div id="details" className="flex flex-col bg-black text-white rounded-2xl justify-center text-center m-3 my-20">
+          <h2 className="md:text-5xl text-3xl my-6 font-bold border-white border-b-2">
+            Course Fees and Duration
+          </h2>
+          <p className="flex flex-col text-lg gap-4 p-2 my-6">
+            <b>Duration:</b> 6 Months (Two Quarters)
+            <b>Fees:</b> Rs 6000 per Quarter and Rs 1000 registration Fees
+            <b>Schedule:</b> Classes on Saturdays only, so that every one can attend
+          </p>
+
+        </div>
+        <h2 id="designers" className="text-center my-16 p-2 lg:my-32 text-2xl lg:text-4xl 2xl:text-5xl md:mx-52 mx-12 lg:mx-40 2xl:mx-80 rounded-xl md:p-2 lg:p-3 font-bold">
           The Program Designers
         </h2>
-
-        <div className="flex flex-col md:flex-row justify-center my-6 lg:my-36 mx-4 space-y-6 md:space-x-6 md:space-y-0">
-          <div className="flex flex-col p-3 bg-white justify-center rounded-xl text-center xl:flex-row shadow-lg">
+          <div className="flex flex-col md:flex-row justify-center my-6 lg:my-36 mx-3 space-y-6 md:space-x-6 md:space-y-0">
+          <div className="flex flex-col p-3 bg-white items-center gap-2 justify-center rounded-xl text-center xl:flex-row shadow-lg">
             <Image
-              className="mx-2 xl:w-60 lg:w-66 w-auto h-72 md:h-60 my-2 md:w-auto"
+              className="mx-2 xl:w-60 lg:w-66 w-auto h-60 md:h-72 my-4 md:w-auto"
               src={zia}
               alt={"fjdc"}
               width={200}
@@ -72,9 +86,9 @@ const Outline = () => {
             Blockchain technologies, Data Science, Digital Finance and Cloud
             Native Computing. Currently, he is the CEO of Panacloud (Pvt.) Ltd.
           </div>
-          <div className="flex flex-col text-center w-auto bg-white xl:flex-row rounded-xl p-3 justify-center shadow-lg">
+          <div className="flex flex-col text-center items-center gap-2 bg-white xl:flex-row rounded-xl p-3 justify-center shadow-lg">
             <Image
-              className="mx-2 xl:w-60 lg:w-66 w-auto my-2 h-60 md:w-84"
+              className="mx-2 xl:w-60 lg:w-66 w-auto my-4 h-60 md:h-72 md:w-60"
               src={qasim}
               alt={"fjdc"}
               width={200}
@@ -92,7 +106,7 @@ const Outline = () => {
             Intelligence (AI) and Data Science 
           </div>
         </div>
-        <h2 id="outline" className="text-center my-16 mx-20 p-2 lg:my-32 text-3xl md:mx-60 md:p-2 lg:text-4xl 2xl:text-5xl lg:mx-60 2xl:mx-96 rounded-xl lg:p-3 bg-gray-200 font-bold">
+        <h2 id="outline" className="text-center my-16 mx-20 p-2 lg:my-32 text-3xl md:mx-60 md:p-2 lg:text-4xl 2xl:text-5xl lg:mx-60 2xl:mx-96 rounded-xl lg:p-3 font-bold">
           Course Outline
         </h2>
         <div className="mt-10 md:flex md:flex-row gap-x-2 gap-y-6 mb-10">
