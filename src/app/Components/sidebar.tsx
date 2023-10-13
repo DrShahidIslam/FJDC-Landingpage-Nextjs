@@ -53,12 +53,12 @@ const Sidebar = () => {
           </div>
         </Link>
         <Link href="/Contact">
-          <div className="hover:translate-x-2 my-2 transition transform duration-400 ease-in-out font-bold flex text-lg justify-end items-end bg-yellow-500 py-6 w-16 rounded-r-lg">
+          <div className="hover:translate-x-2 my-2 transition transform duration-400 ease-in-out font-bold flex text-lg justify-end items-end bg-yellow-500 py-8 w-16 rounded-r-lg">
             <span className="-rotate-90 transform origin-center">Contact</span>
           </div>
         </Link>
         <Link href="/Gallery">
-          <div className="hover:translate-x-2 my-2 transition transform duration-400 ease-in-out font-bold flex text-lg justify-end items-end bg-yellow-500 py-6 w-16 rounded-r-lg">
+          <div className="hover:translate-x-2 my-2 transition transform duration-400 ease-in-out font-bold flex text-lg justify-end items-end bg-yellow-500 py-7 w-16 rounded-r-lg">
             <span className="-rotate-90 transform origin-center">Gallery</span>
           </div>
         </Link>

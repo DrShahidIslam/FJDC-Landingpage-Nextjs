@@ -11,6 +11,7 @@ import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import fjdc from "../../../public/fjdc.jpg";
 import Link from "next/link";
+import Navbar from "../Components/Sidebar-pages";
 
 export default function Gallery() {
   const images = [e, k, l, g, i, f, c]; // State to hold the images
@@ -45,6 +46,7 @@ export default function Gallery() {
   };
 
   return (
+    <><div className="z-10 relative"><Navbar/></div>
     <div
       className="flex flex-col items-center justify-center min-h-screen py-2 md:px-19 px-4"
       style={{
@@ -53,6 +55,7 @@ export default function Gallery() {
         backgroundPosition: "center",
       }}
     >
+      
       <div className="flex justify-center md:text-5xl -mt-28 lg:-mt-12 lg:text-6xl font-semibold text-4xl text-white">
         Gallery
       </div>
@@ -101,6 +104,6 @@ export default function Gallery() {
           Home
         </Link>
       </button>
-    </div>
+    </div></>
   );
 }

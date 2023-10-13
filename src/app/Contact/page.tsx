@@ -1,10 +1,12 @@
+"use client"
 import React from 'react'
 import fjdc from '../../../public/fjdc.jpg'
 import Link from 'next/link';
+import Navbar from '../Components/Sidebar-pages';
 
 export default function Contact() {
   return (
-    <div
+    <><Navbar /><div
       className="flex flex-col items-center justify-center min-h-screen py-2 md:py-10 lg:py-20"
       style={{
         backgroundImage: `url(${fjdc.src})`,
@@ -23,6 +25,6 @@ export default function Contact() {
           Home
         </Link>
       </button>
-    </div>
+    </div></>
   );
 }
