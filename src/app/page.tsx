@@ -163,14 +163,14 @@ export default function Home() {
           dentistry converge with the boundless possibilities of Generative AI
           and Large Language Models (LLMs). With him at the helm, the Center for
           Leadership and Innovation emerges as a pioneer, placing Pakistan
-          squarely at the forefront of healthcare's technological revolution.<br></br> In
+          squarely at the forefront of healthcare&apos;s technological revolution.<br></br> In
           the spirit of knowledge sharing and innovation, Dr. Hussain has
-          brought together the world's leading AI developers and trainers
+          brought together the world&apos;s leading AI developers and trainers
           through fjdc.ai. This dynamic platform is the incubator for pushing
-          the boundaries of AI's potential in healthcare. It serves as a
+          the boundaries of AI&apos;s potential in healthcare. It serves as a
           testament to his dedication to innovation, as he strives to bring
           these cutting-edge technologies to the forefront of healthcare
-          practices.<br></br> Dr. Hussain Askary's visionary approach and unwavering
+          practices.<br></br> Dr. Hussain Askary&apos;s visionary approach and unwavering
           commitment to healthcare, leadership, and Generative AI are not just
           transformative but deeply inspirational. His work beckons others to
           join in the exploration of the limitless possibilities that lie at the

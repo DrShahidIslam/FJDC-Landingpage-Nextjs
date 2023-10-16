@@ -104,7 +104,7 @@ const Outline = () => {
             foundation in Data Science, a prestigious Data Analytics
             certification, and a decade of experience in web software
             development, he is well-equipped to guide you through the
-            intricacies of AI and Data Science. 🎓 Education: Master&apos;s Degrees in Data Science 📊
+            intricacies of AI and Data Science. 🎓 Education: Masters Degrees in Data Science 📊
             Certification: Data Analytics Certified by ICAEW 📅 Experience: Over
             10 Years in Web Software Development 🌟 Specialization: Artificial
             Intelligence (AI) and Data Science 

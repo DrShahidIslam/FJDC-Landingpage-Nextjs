@@ -3,10 +3,10 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <main className="bg-gray-900 text-white px-12 py-6 pb-16">
+    <main className="bg-gray-900 text-white px-12 py-6 pb-12">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-32">
-        <div>
-          <h1 className='lg:text-lg my-2 text-md font-semibold'> FJDC.AI</h1>
+        <div><Link href="/">
+          <h1 className='lg:text-lg my-2 text-md font-semibold'> FJDC.AI</h1></Link>
           <h2 className="lg:text-lg text-md font-extralight">Certified Generative AI Healthcare and Medicine Specialization</h2>
         </div>
         <div>
@@ -38,6 +38,8 @@ export default function Footer() {
           </ul>
         </div>
       </div>
+      <p className='text-center mt-6 -mb-6 text-md'>© FJDC.AI 2023</p>  
     </main>
+    
   );
 }

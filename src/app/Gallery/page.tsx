@@ -100,7 +100,7 @@ export default function Gallery() {
           </button>
         )}
       </div>
-      <button className='p-2 text-sm md:text-lg lg:text-xl hover:scale-105 bg-yellow-500 rounded-lg font-bold mt-20 md:mt-16 lg:mt-20'>
+      <button className='p-2 text-sm md:text-lg lg:text-xl hover:scale-105 bg-yellow-500 rounded-lg font-bold mt-24 md:mt-16 lg:mt-20'>
         <Link href='/'>
           Home
         </Link>
