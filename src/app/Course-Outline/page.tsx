@@ -10,6 +10,7 @@ import { programsData } from "../Components/programsdata";
 import Sidebar from "../Components/sidebar";
 import Navigation from "../Components/Navigation";
 import Navbar from "../Components/Sidebar-pages";
+import Footer from "../Components/Footer";
 
 const Outline = () => {
   const [selectedItem, setSelectedItem] = useState("web");
@@ -34,28 +35,31 @@ const Outline = () => {
           />
           
           <div className="absolute inset-0 bg-white opacity-80 z-10" style={{position: 'fixed'}}></div>
-          <div className="m-5 relative z-30"><Navbar /></div>
-          <h1 className="mx-3 m-5 p-2 md:mb-20 mb-10 text-xl md:text-4xl font-extrabold text-center xl:mx-44 rounded-xl md:p-2 lg:p-3 " style={{position: 'relative', zIndex: 20}}>
+          <div className="m-3 relative z-30"><Navbar /></div>
+          <h1 className="mx-3 p-2 md:mb-20 mb-10 text-xl md:text-4xl font-extrabold text-center xl:mx-28 rounded-xl md:p-2 lg:p-3 " style={{position: 'relative', zIndex: 20}}>
     {" "}
-    Certified Generative AI Healthcare and Medical Specialist
-</h1>
+    Certified Generative AI Healthcare and Medicine Specialization
+  </h1>
       <div className="flex lg:flex-row flex-col items-center md:items-stretch my-4 z-10 relative ">
       <div><Navigation/></div>
         
         <div>
             
-        <p className="text-center m-2 md:mx-20 rounded-xl mx-3 lg:my-2 md:my-4 my-24 p-3 text-md md:text-xl bg-slate-700 text-white">
+        <p className="text-center m-2 md:mx-20 rounded-xl mx-3 font-light lg:my-2 md:my-4 my-24 p-3 text-md md:text-xl bg-gray-800 text-white">
           Generative AI in healthcare refers to the application of generative
           artificial intelligence techniques and models in various aspects of
           the healthcare industry. It involves using machine learning algorithms
           to generate new and original content that is relevant to healthcare,
           such as medical images, personalized treatment plans, and more.
         </p>
-        <div id="uses" className="flex object-center max-w-screen-lg shadow-lg mx-2 md:my-32 xl:mx-36 2xl:mx-68 md:mx-24 ">
+        <h2 id="designers" className="text-center mt-20 p-2 my-10 lg:my-20 text-2xl lg:text-4xl 2xl:text-4xl md:mx-24 mx-12 lg:mx-24 2xl:mx-16 rounded-xl md:p-2 lg:p-3 font-bold">
+          Applications of AI in Healthcare and Medicine
+        </h2>
+        <div id="uses" className="flex object-center max-w-screen-lg shadow-lg mx-3 md:my-16 xl:mx-36 2xl:mx-68 md:mx-4 ">
           <Image src={appication} alt="ai in healthcare"></Image>
         </div>
-        <div id="details" className="flex flex-col bg-black text-white rounded-2xl justify-center text-center m-3 my-20">
-          <h2 className="md:text-5xl text-3xl my-6 font-bold border-white border-b-2">
+        <div id="details" className="flex flex-col bg-gray-800 text-white rounded-2xl justify-center text-center m-3 p-2 my-32">
+          <h2 className="md:text-4xl text-2xl my-6 font-semibold border-white border-b-2">
             Course Fees and Duration
           </h2>
           <p className="flex flex-col text-lg gap-4 p-2 my-6">
@@ -65,11 +69,11 @@ const Outline = () => {
           </p>
 
         </div>
-        <h2 id="designers" className="text-center my-16 p-2 lg:my-32 text-2xl lg:text-4xl 2xl:text-5xl md:mx-52 mx-12 lg:mx-40 2xl:mx-80 rounded-xl md:p-2 lg:p-3 font-bold">
+        <h2 id="designers" className="text-center my-12 p-2 lg:my-20 text-2xl lg:text-4xl 2xl:text-4xl md:mx-52 mx-12 lg:mx-40 2xl:mx-80 rounded-xl md:p-2 lg:p-3 font-bold">
           The Program Designers
         </h2>
-          <div className="flex flex-col md:flex-row justify-center my-6 lg:my-36 mx-3 space-y-6 md:space-x-6 md:space-y-0">
-          <div className="flex flex-col p-3 bg-white items-center gap-2 justify-center rounded-xl text-center xl:flex-row shadow-lg">
+          <div className="flex flex-col md:flex-row justify-center my-6 lg:my-24 mx-3 space-y-6 md:space-x-6 md:space-y-0">
+          <div className="flex flex-col p-5 bg-white items-center gap-2 justify-center rounded-xl text-center xl:flex-row shadow-lg">
             <Image
               className="mx-2 xl:w-60 lg:w-66 w-auto h-60 md:h-72 my-4 md:w-auto"
               src={zia}
@@ -86,7 +90,7 @@ const Outline = () => {
             Blockchain technologies, Data Science, Digital Finance and Cloud
             Native Computing. Currently, he is the CEO of Panacloud (Pvt.) Ltd.
           </div>
-          <div className="flex flex-col text-center items-center gap-2 bg-white xl:flex-row rounded-xl p-3 justify-center shadow-lg">
+          <div className="flex flex-col text-center items-center gap-2 bg-white xl:flex-row rounded-xl p-5 justify-center shadow-lg">
             <Image
               className="mx-2 xl:w-60 lg:w-66 w-auto my-4 h-60 md:h-72 md:w-60"
               src={qasim}
@@ -106,10 +110,10 @@ const Outline = () => {
             Intelligence (AI) and Data Science 
           </div>
         </div>
-        <h2 id="outline" className="text-center my-16 mx-20 p-2 lg:my-32 text-3xl md:mx-60 md:p-2 lg:text-4xl 2xl:text-5xl lg:mx-60 2xl:mx-96 rounded-xl lg:p-3 font-bold">
+        <h2 id="outline" className="text-center my-16 mx-20 p-2 lg:my-24 text-3xl md:mx-60 md:p-2 lg:text-4xl 2xl:text-4xl lg:mx-60 2xl:mx-96 rounded-xl lg:p-3 font-bold">
           Course Outline
         </h2>
-        <div className="mt-10 md:flex md:flex-row gap-x-2 gap-y-6 mb-10">
+        <div className="mt-6 md:flex md:flex-row gap-x-2 gap-y-6 mb-10">
           <div className="basis-2/12 mx-2">
             {programsData.map((elem) => (
               <div
@@ -178,7 +182,7 @@ const Outline = () => {
           </div>
         </div>
         <div className="flex justify-center">
-          <button className=" p-2 text-sm md:text-lg lg:text-xl hover:scale-105 bg-yellow-400 rounded-lg font-bold m-4 md:m-6 lg:m-8">
+          <button className=" p-3 text-sm md:text-lg lg:text-xl hover:scale-105 text-white bg-gray-800 rounded-xl font-bold m-4 md:m-6 lg:m-8">
             <Link href="/">Home</Link>
           </button>
         </div></div>

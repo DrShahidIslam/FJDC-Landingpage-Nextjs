@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.navbar {
+  z-index: 1;
+}
 .typing-effect {
   border-right: .15em solid orange; /* The typewriter cursor */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */

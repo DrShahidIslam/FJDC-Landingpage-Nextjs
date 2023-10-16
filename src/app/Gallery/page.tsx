@@ -46,23 +46,24 @@ export default function Gallery() {
   };
 
   return (
-    <><div className="z-10 relative"><Navbar/></div>
-    <div
-      className="flex flex-col items-center justify-center min-h-screen py-2 md:px-19 px-4"
+    <><div
+      className="min-h-screen"
       style={{
         backgroundImage: `url(${fjdc.src})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-    >
+    ><Navbar/>
+    <div
+      className="flex flex-col items-center justify-center md:px-20 px-4">
       
-      <div className="flex justify-center md:text-5xl -mt-28 lg:-mt-12 lg:text-6xl font-semibold text-4xl text-white">
+      <div className="flex justify-center md:text-5xl lg:text-6xl font-semibold text-4xl text-white">
         Gallery
       </div>
       <div className="relative w-full cursor-pointer flex justify-center items-center mt-28 max-w-full overflow-hidden">
         {currentIndex > 0 && (
           <button
-            className="absolute left-4 md:left-6"
+            className="absolute left-2 md:left-1"
             onClick={handleLeftClick}
           >
             <ArrowLeft color="#ffffff" />
@@ -92,18 +93,18 @@ export default function Gallery() {
 
         {currentIndex < images.length - displayCount && (
           <button
-            className="absolute right-4 md:right-6"
+            className="absolute right-4 md:right-1"
             onClick={handleRightClick}
           >
             <ArrowRight color="#ffffff" />
           </button>
         )}
       </div>
-      <button className='p-2 text-sm md:text-lg lg:text-xl hover:scale-105 bg-yellow-500 rounded-lg font-bold mt-10 md:mt-15 lg:mt-20'>
+      <button className='p-2 text-sm md:text-lg lg:text-xl hover:scale-105 bg-yellow-500 rounded-lg font-bold mt-20 md:mt-16 lg:mt-20'>
         <Link href='/'>
           Home
         </Link>
       </button>
-    </div></>
+    </div></div></>
   );
 }
