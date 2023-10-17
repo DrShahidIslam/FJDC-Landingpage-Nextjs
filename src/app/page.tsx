@@ -77,7 +77,7 @@ export default function Home() {
         <main className="flex flex-col items-center justify-center w-full h-full text-center">
 
           <div className="flex flex-col md:flex-row w-full">
-            <div className="md:w-1/2 p-2 flex flex-col -mt-44 md:-mt-20 space-y-6 items-center max-w-screen-md justify-center">
+            <div className="md:w-1/2 p-2 flex flex-col -mt-80 md:-mt-20 space-y-6 items-center max-w-screen-md justify-center">
               <h1 className="text-4xl flex flex-col md:text-3xl lg:text-4xl space-y-3 xl:text-5xl 2xl:text-5xl text-white font-bold mb-4">
                 Welcome to<br></br>{" "}
                 <span className="text-yellow-400 2xl:text-6xl">FJDC.AI</span>
@@ -131,7 +131,7 @@ export default function Home() {
       </div>
       <div className="bg-white justify-center items-center shadow-xl rounded-lg m-4 p-3 flex xl:flex-row flex-col">
         <Image
-          className="mx-8 h-auto lg:h-2/3 xl:h-auto w-auto my-4"
+          className="mx-8 h-auto md:h-96 xl:h-auto w-auto my-4"
           src={hussain}
           alt={"dr hussain askary"}
           width={400}
