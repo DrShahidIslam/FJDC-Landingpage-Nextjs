@@ -3,11 +3,12 @@
 import { useEffect, useLayoutEffect, useState } from "react";
 import fjdc from "../../public/fjdcbanner.jpg";
 import fjdcstandee from "../../public/fjdcstandee.jpg";
-import landingblank from "../../public/sdaf.jpg";
+import landing from "../../public/Landing_Page_4269x2400.jpg";
 import Sidebar from "./Components/sidebar";
 import img from "../../public/scaled.jpg";
 import hussain from "../../public/Hussain-Askary.jpeg";
 import Image from "next/image";
+import fjlogo from '../../public/fjdclogo.jpg'
 
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState<{
@@ -63,10 +64,10 @@ export default function Home() {
     <>
       <Sidebar />
       <div
-        className="flex flex-col items-center justify-center h-screen md:px-18 lg:px-12 px-4 "
+        className="flex flex-col items-center justify-center h-screen md:px-18 lg:px-8 px-4 "
         style={{
           backgroundImage: `url(${
-            (size.width || 0) > 600 ? img.src : fjdcstandee.src
+            (size.width || 0) > 600 ? landing.src : fjdcstandee.src
           })`,
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -74,8 +75,9 @@ export default function Home() {
         }}
       >
         <main className="flex flex-col items-center justify-center w-full h-full text-center">
+
           <div className="flex flex-col md:flex-row w-full">
-            <div className="md:w-1/2 p-2 flex flex-col -mt-40 lg:-mt-20 space-y-6 items-center max-w-screen-md justify-center">
+            <div className="md:w-1/2 p-2 flex flex-col -mt-44 md:-mt-20 space-y-6 items-center max-w-screen-md justify-center">
               <h1 className="text-4xl flex flex-col md:text-3xl lg:text-4xl space-y-3 xl:text-5xl 2xl:text-5xl text-white font-bold mb-4">
                 Welcome to<br></br>{" "}
                 <span className="text-yellow-400 2xl:text-6xl">FJDC.AI</span>
@@ -127,57 +129,46 @@ export default function Home() {
           </div>
         </main>
       </div>
-      <div className="bg-white shadow-xl rounded-lg m-4 p-3 flex xl:flex-row flex-col">
+      <div className="bg-white justify-center items-center shadow-xl rounded-lg m-4 p-3 flex xl:flex-row flex-col">
         <Image
-          className="mx-8 h-auto lg:h-96 xl:h-auto w-auto my-4"
+          className="mx-8 h-auto lg:h-2/3 xl:h-auto w-auto my-4"
           src={hussain}
           alt={"dr hussain askary"}
           width={400}
           height={350}
         ></Image>
         <div className="p-3">
-        <h2 className="font-bold">
-        Dr. Hussain Askary: Pioneering Healthcare, Inspiring Leadership, and
-          Revolutionizing with Generative AI
-
-        </h2>
-        <p>
-           In the ever-evolving landscape of
-          healthcare and technology, one visionary stands out as a true
-          trailblazer – Dr. Hussain Askary. With an illustrious background in
-          the world of dentistry, Dr. Askary has dedicated more than two decades
-          to reshaping the future of healthcare and dental education.<br></br> His
-          journey of academic excellence is marked by the attainment of a Master
-          of Science (MSc) in Dental Public Health from the esteemed University
-          of London, coupled with the prestigious DDPH qualification from the
-          Royal College of Surgeons, England. These credentials not only
-          showcase his dedication but also his relentless pursuit of knowledge
-          and advancement.<br></br> At the helm of Fatima Jinnah Dental College, as its
-          CEO and Head of the Department of Community Dentistry, Dr. Hussain
-          plays an instrumental role in propelling dental education and public
-          health practices to new heights. His visionary leadership has
-          transformed the institution into a beacon of dental education and
-          cutting-edge research, not just in Pakistan, but worldwide.<br></br> However,
-          what truly sets Dr. Hussain apart is his unbridled enthusiasm for
-          innovation. He envisions a future where the worlds of medicine and
-          dentistry converge with the boundless possibilities of Generative AI
-          and Large Language Models (LLMs). With him at the helm, the Center for
-          Leadership and Innovation emerges as a pioneer, placing Pakistan
-          squarely at the forefront of healthcare&apos;s technological revolution.<br></br> In
-          the spirit of knowledge sharing and innovation, Dr. Hussain has
-          brought together the world&apos;s leading AI developers and trainers
-          through fjdc.ai. This dynamic platform is the incubator for pushing
-          the boundaries of AI&apos;s potential in healthcare. It serves as a
-          testament to his dedication to innovation, as he strives to bring
-          these cutting-edge technologies to the forefront of healthcare
-          practices.<br></br> Dr. Hussain Askary&apos;s visionary approach and unwavering
-          commitment to healthcare, leadership, and Generative AI are not just
-          transformative but deeply inspirational. His work beckons others to
-          join in the exploration of the limitless possibilities that lie at the
-          intersection of medicine and technology. Be prepared to be inspired
-          and captivated by the incredible journey that Dr. Hussain is paving
-          for a brighter, healthier, and technologically advanced future for all.
-        </p></div>
+          <h2 className="font-bold">
+            Dr. Hussain Askary: Pioneering Healthcare, Inspiring Leadership, and
+            Revolutionizing with Generative AI
+          </h2>
+          <p className="mt-2">
+            In the ever-evolving landscape of healthcare and technology, one
+            visionary stands out as a true trailblazer – Dr. Hussain Askary.
+            With an illustrious background in the world of dentistry, Dr. Askary
+            has dedicated more than two decades to reshaping the future of
+            healthcare and dental education.<br></br>His journey of academic
+            excellence is marked by the attainment of a Master of Science (MSc)
+            in Dental Public Health from the esteemed University of London,
+            coupled with the prestigious DDPH qualification from the Royal
+            College of Surgeons, England. As the CEO and Head of the Department
+            of Community Dentistry at Fatima Jinnah Dental College, Dr. Hussain
+            has transformed the institution into a global beacon of dental
+            education and research. His leadership propels innovation,
+            envisioning a future where medicine and dentistry converge with
+            Generative AI and Large Language Models. At the forefront of this
+            technological revolution is the Center for Leadership and
+            Innovation, led by Dr. Hussain, placing Pakistan as a pioneer in
+            healthcare&apos;s technological landscape. Through fjdc.ai, He brings
+            together top AI developers, fostering cutting-edge technologies in
+            healthcare.<br></br> Dr. Hussain Askary&apos;s
+            visionary approach, commitment to healthcare, leadership, and
+            Generative AI are transformative and deeply inspirational. His work
+            beckons others to explore the limitless possibilities at the
+            intersection of medicine and technology, paving the way for a
+            brighter, healthier, and technologically advanced future..
+          </p>
+        </div>
       </div>
     </>
   );

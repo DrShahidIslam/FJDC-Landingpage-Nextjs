@@ -52,7 +52,7 @@ const Outline = () => {
           to generate new and original content that is relevant to healthcare,
           such as medical images, personalized treatment plans, and more.
         </p>
-        <h2 id="designers" className="text-center mt-20 p-2 my-10 lg:my-20 text-2xl lg:text-4xl 2xl:text-4xl md:mx-24 mx-12 lg:mx-24 2xl:mx-16 rounded-xl md:p-2 lg:p-3 font-bold">
+        <h2 id="designers" className="text-center mt-20 p-2 my-10 lg:my-20 text-2xl lg:text-3xl 2xl:text-4xl md:mx-16 mx-12 lg:mx-8 2xl:mx-12 rounded-xl md:p-2 lg:p-3 font-bold">
           Applications of AI in Healthcare and Medicine
         </h2>
         <div id="uses" className="flex object-center max-w-screen-lg shadow-lg mx-3 md:my-16 xl:mx-36 2xl:mx-68 md:mx-4 ">
@@ -69,7 +69,7 @@ const Outline = () => {
           </p>
 
         </div>
-        <h2 id="designers" className="text-center my-12 p-2 lg:my-20 text-2xl lg:text-4xl 2xl:text-4xl md:mx-52 mx-12 lg:mx-40 2xl:mx-80 rounded-xl md:p-2 lg:p-3 font-bold">
+        <h2 id="designers" className="text-center my-12 p-2 lg:my-20 text-2xl lg:text-4xl 2xl:text-4xl md:mx-52 mx-12 lg:mx-32 2xl:mx-60 rounded-xl md:p-2 lg:p-3 font-bold">
           The Program Designers
         </h2>
           <div className="flex flex-col md:flex-row justify-center my-6 lg:my-24 mx-3 space-y-6 md:space-x-6 md:space-y-0">
@@ -110,7 +110,7 @@ const Outline = () => {
             Intelligence (AI) and Data Science 
           </div>
         </div>
-        <h2 id="outline" className="text-center my-16 mx-20 p-2 lg:my-24 text-3xl md:mx-60 md:p-2 lg:text-4xl 2xl:text-4xl lg:mx-60 2xl:mx-96 rounded-xl lg:p-3 font-bold">
+        <h2 id="outline" className="text-center my-16 mx-20 p-2 lg:my-24 text-3xl md:mx-60 md:p-2 lg:text-4xl 2xl:text-4xl lg:mx-40 2xl:mx-60 rounded-xl lg:p-3 font-bold">
           Course Outline
         </h2>
         <div className="mt-6 md:flex md:flex-row gap-x-2 gap-y-6 mb-10">
